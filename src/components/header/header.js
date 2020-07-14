@@ -70,6 +70,9 @@ function Header (props) {
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
               Support
             </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Cart(Number)
+            </Link>
           </nav>
           <Button href="#" color="default" variant="outlined" className={classes.link}>
             Login

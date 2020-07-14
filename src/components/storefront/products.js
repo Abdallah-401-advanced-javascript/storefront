@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { showCategory, reset } from '../../store/categories';
+import { showCategory} from '../../store/categories';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -37,16 +37,16 @@ const VotesCounter = props => {
                   { product.name}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-              price:{ product.price} inStock: {product.inStock}
+              Price:{ product.price} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; In Stock: {product.inStock}
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               <Button size="small" color="primary">
-          Share
+          ADD TO CART
               </Button>
               <Button size="small" color="primary">
-          Learn More
+          VIEW DETAILS
               </Button>
             </CardActions>
           </Card>,
@@ -62,7 +62,7 @@ const mapStateToProps = state => ({
   productsTo: state.Category.productsTo,
 });
 
-const mapDispatchToProps = {showCategory, reset};
+const mapDispatchToProps = {showCategory};
 
 // const mapDispatchToProps = ({
 //     showCategory: dispatch(showCategory()),

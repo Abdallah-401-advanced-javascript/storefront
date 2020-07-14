@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { showCart} from '../../store/categories';
+import { addToCart} from '../../store/cart';
 
 const CartCounter = props => {
 
   return (
     <section className="counter">
       <ul id='categories'>
-        {props.Category.cart.map( item=> 
-          <li onClick={()=> props.showCart(item.name)} key={item.name}> |{item.name.toUpperCase()}|</li>,
+        {props.Cart.cartProducts.map( item=> 
+          <li  key={item.name}> |{item.name.toUpperCase()}|</li>,
         )}
       </ul>
     </section>
@@ -17,10 +17,10 @@ const CartCounter = props => {
 };
 
 const mapStateToProps = state => ({
-  Category: state.Category,
+  Cart: state.Cart,
 });
 
-const mapDispatchToProps = {showCart};
+const mapDispatchToProps = {addToCart};
 
 // const mapDispatchToProps = ({
 //     showCategory: dispatch(showCategory()),

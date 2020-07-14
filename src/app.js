@@ -4,7 +4,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Categories from './components/storefront/categories';
 import Products from './components/storefront/products';
-// import SimpleCart from './components/cart/simplecart';
+import SimpleCart from './components/cart/simplecart';
 
 
 
@@ -14,7 +14,7 @@ export default props => {
   return (
     <>
       <Header/> 
-      {/* <SimpleCart /> */}
+      <SimpleCart />
       <Categories/>
       <Products/>
       <Footer/> 

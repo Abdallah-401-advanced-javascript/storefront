@@ -28,8 +28,8 @@ const VotesCounter = props => {
   return (
     <section className="counter">
       <ul id="productLi">
-        {props.productsTo.map( product=> 
-          <Card className={classes.root} key={product.name}>
+        {props.productsTo.map( (product,id)=> 
+          <Card className={classes.root} key={id}>
             <CardActionArea>
               <CardMedia
                 component="img"

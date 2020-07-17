@@ -38,10 +38,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor: theme.palette.grey[200]
+    backgroundColor: theme.palette.grey[200],
   },
   fullHeight: {
-    height: "100%"
+    height: '100%',
   },
   footer: {
     borderTop: `1px solid ${theme.palette.divider}`,

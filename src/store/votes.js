@@ -21,11 +21,12 @@ export default (state = initialState, action) => {
   let {type, payload} = action; // destructuring
   // let type = action.type
   // let payload = action.payload
-    
+  let totalVotes;
+  let candidates;     
   switch(type) {
   case 'INCREMENT':
-    let totalVotes = state.totalVotes + 1;
-    let candidates = state.candidates.map(candidate=> {
+    totalVotes = state.totalVotes + 1;
+    candidates = state.candidates.map(candidate=> {
       if (candidate.name === payload) {
         return { name: candidate.name, votes: candidate.votes + 1};
       }

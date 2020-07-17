@@ -16,7 +16,7 @@ let initialState = {
 // reducer : switch case
 export default (state = initialState, action) => {
   let {type, payload,payload2} = action; // destructuring
-  console.log(payload,payload2)
+  console.log(payload,payload2);
   // let type = action.type
   // let payload = action.payload
   let products;   

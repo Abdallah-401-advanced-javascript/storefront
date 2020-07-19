@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { addToCart} from '../../store/cart';
+import { connect } from 'react-redux';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -36,10 +38,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor: theme.palette.grey[200]
+    backgroundColor: theme.palette.grey[200],
   },
   fullHeight: {
-    height: "100%"
+    height: '100%',
   },
   footer: {
     borderTop: `1px solid ${theme.palette.divider}`,
@@ -70,6 +72,9 @@ function Header (props) {
             <Link variant="button" color="textPrimary" href="#" className={classes.link}>
               Support
             </Link>
+            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+              Cart({props.Cart.cartProducts.length})
+            </Link>
           </nav>
           <Button href="#" color="default" variant="outlined" className={classes.link}>
             Login
@@ -79,5 +84,10 @@ function Header (props) {
     </header>
   );
 }
+const mapStateToProps = state => ({
+  Cart: state.Cart,
+});
+
+const mapDispatchToProps = {addToCart};
   
-export default Header;
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

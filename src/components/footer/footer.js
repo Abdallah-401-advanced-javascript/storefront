@@ -36,10 +36,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(8, 0, 6),
   },
   cardHeader: {
-    backgroundColor: theme.palette.grey[200]
+    backgroundColor: theme.palette.grey[200],
   },
   fullHeight: {
-    height: "100%"
+    height: '100%',
   },
   footer: {
     borderTop: `1px solid ${theme.palette.divider}`,
@@ -53,7 +53,7 @@ function Footer (props) {
   const classes = useStyles();
   return (
     <footer>
-            <Container maxWidth="lg" component="footer" className={classes.footer}>
+      <Container maxWidth="lg" component="footer" className={classes.footer}>
         <Grid container spacing={4} justify="space-around">
 
           {/* How do these 3 combine to make this a responsive grid? */}

@@ -1,6 +1,8 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React ,{useEffect } from 'react';
 import { connect } from 'react-redux';
-import { showCategory, reset } from '../../store/categories';
+// import {getCartData} from '../../store/cart';
+import { showCategory} from '../../store/categories';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -40,6 +42,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 const VotesCounter = props => {
   const classes = useStyles();
+
+  // const fetchCartData = (e) => {
+  //   e && e.preventDefault(); // if I have a form
+  //   props.getCartData();
+  //   // props.addToCart('nothing/');
+  // };
+
+  // useEffect(()=> {
+  //   fetchCartData();
+  // }, []);
   return (
     <section className="counter">
       <p id='categoriesTitle'>Browse our Categories</p>
@@ -66,7 +78,7 @@ const mapStateToProps = state => ({
   Category: state.Category,
 });
 
-const mapDispatchToProps = {showCategory, reset};
+const mapDispatchToProps = {showCategory};
 
 // const mapDispatchToProps = ({
 //     showCategory: dispatch(showCategory()),

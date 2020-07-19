@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React ,{useEffect } from 'react';
 import { connect } from 'react-redux';
-import { addToCart} from '../../store/cart';
+import {getCartData,deleteFromCart} from '../../store/cart';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -32,6 +32,14 @@ const CartCounter = props => {
   const classes = useStyles();
   const [dense] = React.useState(false);
   const [secondary] = React.useState(false);
+
+  const fetchData = (e) => {
+    e && e.preventDefault(); // if I have a form
+    props.getCartData();
+  };
+  useEffect(()=> {
+    fetchData();
+  }, []);
   return (
     <section className="counter">
       <Grid item xs={12} md={6} id="cartList">
@@ -44,16 +52,19 @@ const CartCounter = props => {
               <ListItem key={id}>
                 <ListItemAvatar>
                   <Avatar>
+                    {console.log('{console.log(item.name)}{console.log(item.name)}',item.name)}
                     <FolderIcon />
                   </Avatar>
                 </ListItemAvatar>
                 <ListItemText
-                  primary={item.name.toUpperCase()}
+                  primary={item.name}
+                  
                   secondary={secondary ? 'Secondary text' : null}
                 />
                 <ListItemSecondaryAction key={id}>
-                  <IconButton edge="end" aria-label="delete">
+                  <IconButton edge="end" aria-label="delete" onClick={()=> props.deleteFromCart(item._id,props.products,item)}>
                     <DeleteIcon />
+
                   </IconButton>
                 </ListItemSecondaryAction>
               </ListItem>,
@@ -67,10 +78,11 @@ const CartCounter = props => {
 };
 
 const mapStateToProps = state => ({
+  products: state.Products.products,
   Cart: state.Cart,
 });
 
-const mapDispatchToProps = {addToCart};
+const mapDispatchToProps = {getCartData,deleteFromCart};
 
 // const mapDispatchToProps = ({
 //     showCategory: dispatch(showCategory()),

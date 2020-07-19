@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/storefront/static/css/main.00cc58d2.chunk.css",
-    "main.js": "/storefront/static/js/main.04ef74d3.chunk.js",
-    "main.js.map": "/storefront/static/js/main.04ef74d3.chunk.js.map",
+    "main.js": "/storefront/static/js/main.9e8d564e.chunk.js",
+    "main.js.map": "/storefront/static/js/main.9e8d564e.chunk.js.map",
     "runtime-main.js": "/storefront/static/js/runtime-main.b232244d.js",
     "runtime-main.js.map": "/storefront/static/js/runtime-main.b232244d.js.map",
-    "static/js/2.93ed3b4d.chunk.js": "/storefront/static/js/2.93ed3b4d.chunk.js",
-    "static/js/2.93ed3b4d.chunk.js.map": "/storefront/static/js/2.93ed3b4d.chunk.js.map",
+    "static/js/2.4c793406.chunk.js": "/storefront/static/js/2.4c793406.chunk.js",
+    "static/js/2.4c793406.chunk.js.map": "/storefront/static/js/2.4c793406.chunk.js.map",
     "index.html": "/storefront/index.html",
-    "precache-manifest.661533b661d34cf726df6997b3025c9d.js": "/storefront/precache-manifest.661533b661d34cf726df6997b3025c9d.js",
+    "precache-manifest.ab5cd79121293880c14a7449a30f4d7d.js": "/storefront/precache-manifest.ab5cd79121293880c14a7449a30f4d7d.js",
     "service-worker.js": "/storefront/service-worker.js",
     "static/css/main.00cc58d2.chunk.css.map": "/storefront/static/css/main.00cc58d2.chunk.css.map",
-    "static/js/2.93ed3b4d.chunk.js.LICENSE.txt": "/storefront/static/js/2.93ed3b4d.chunk.js.LICENSE.txt"
+    "static/js/2.4c793406.chunk.js.LICENSE.txt": "/storefront/static/js/2.4c793406.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b232244d.js",
-    "static/js/2.93ed3b4d.chunk.js",
+    "static/js/2.4c793406.chunk.js",
     "static/css/main.00cc58d2.chunk.css",
-    "static/js/main.04ef74d3.chunk.js"
+    "static/js/main.9e8d564e.chunk.js"
   ]
 }
